@@ -1,61 +1,31 @@
-# evoDirecte 🌸 (Flower 1.0)
+<p align="center" style="display: flex; flex-direction: column;">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg">
+    <img src="assets/logo-light.svg" alt="Logo" style="width: 50%;" />
+  </picture>
+</p>
+<p align="center">The <strong>ULTIMATE wrapper</strong> for EcoleDirecte's private API.</strong></p>
+<p align="center">
+  <img src="https://img.shields.io/npm/v/evodirecte?logo=npm&color=orange" alt="NPM version" />
+  <img src="https://img.shields.io/badge/EcoleDirecte-v4.96.1-blue?logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNXB4IiB2aWV3Qm94PSIwIDAgMjQgMjUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdHJhbnNmb3JtPSJyb3RhdGUoMCkgc2NhbGUoMSwgMSkiPgo8cGF0aCBkPSJNMjAuOTg3IDExLjUyMUMyMC43NDQ0IDguMjc0MTEgMTYuNTI1MyA1LjkyOTE2IDExLjU3NzQgNi4zMzA1QzYuNjI5NTQgNi43MzE4NSAyLjc4NTYxIDEwLjMyODcgMy4wMDkyOSAxMy41NzY0QzMuMDA5MjkgMTMuNTc2NCA0Ljg0Mjg3IDcuOTY1NjYgMTEuMDI4MSA3LjQ3OTU0QzE0Ljk4MjEgNy4xNzEwOCAxOC4zNjE1IDkuMDI3MiAxOC41ODI1IDExLjY1NDVDMTguNzYyOSAxMy44NDE2IDE2LjYzOCAxNS44MDMyIDEzLjYzNDYgMTYuNjQ2NUMxMy4wNjAxIDE2LjgwMTYgMTMuMTkyNyAxNi41ODA3IDEzLjIzNjkgMTYuMzgxNEMxMy4yODExIDE2LjE4MiAxMy4xMjYgMTYuMTE3MSAxMi45OTQzIDE2LjExNzFDMTIuOTk0MyAxNi4xMTcxIDExLjkzMzcgMTYuMjQ5NyAxMS4yMjY2IDE2LjI0OTdDMTAuNzE1OSAxNi4yNDg4IDEwLjIwNjMgMTYuMjA0NSA5LjcwMzI0IDE2LjExNzFDOS42MzU4MyAxNi4xMTk4IDkuNTcwMSAxNi4wOTU3IDkuNTIwNDEgMTYuMDVDOS40NzA3MiAxNi4wMDQ0IDkuNDQxMTMgMTUuOTQxIDkuNDM4MDggMTUuODczNkM5LjQzNzIxIDE1Ljg2NjQgOS40MzcyMSAxNS44NTkxIDkuNDM4MDggMTUuODUxOVYxNS44MDc3TDkuNzI0ODkgMTQuMTA2N1YxNC4wNjI2SDExLjk0OTlDMTIuMTEwNSAxNC4wNTgxIDEyLjI2MjkgMTMuOTkwNyAxMi4zNzQ0IDEzLjg3NUMxMi40ODU5IDEzLjc1OTMgMTIuNTQ3NSAxMy42MDQ1IDEyLjU0NiAxMy40NDM4QzEyLjU0MzEgMTMuMjg0NSAxMi40OCAxMy4xMzIyIDEyLjM2OTQgMTMuMDE3NEMxMi4yNTg5IDEyLjkwMjcgMTIuMTA5IDEyLjgzNCAxMS45NDk5IDEyLjgyNTFIOS44OTg5NVYxMi44MDUzTDEwLjIwODMgMTEuMTcxQzEwLjIzMTMgMTEuMDkxMyAxMC4yNjg2IDExLjAxNjUgMTAuMzE4MyAxMC45NTAxQzEwLjM0MDkgMTAuOTI4NCAxMC4zNjI1IDEwLjkyODQgMTAuMzg1MSAxMC45MDU5QzEwLjQwNjcgMTAuOTA1OSAxMC40MDY3IDEwLjkwNTkgMTAuNDA2NyAxMC44ODQyQzEwLjY3MTkgMTAuNzUxNyAxMS4zNTY0IDEwLjY2MzMgMTIuMTczNiAxMC42NjMzQzEyLjczMTYgMTAuNjQ1NSAxMy4yODkzIDEwLjcwNjIgMTMuODMwNCAxMC44NDM2QzEzLjk1MDIgMTAuODI4OSAxNC4wNjIxIDEwLjc3NTkgMTQuMTQ5NSAxMC42OTI2QzE0LjIzNjkgMTAuNjA5MyAxNC4yOTUyIDEwLjUgMTQuMzE1NiAxMC4zODFMMTQuNDY5OCA5LjU2Mzg0QzE0LjQ4MjEgOS40NjgyNCAxNC40NjI5IDkuMzcxMjUgMTQuNDE1MyA5LjI4NzQ3QzE0LjM2NzYgOS4yMDM3IDE0LjI5NCA5LjEzNzY4IDE0LjIwNTYgOS4wOTkzNkMxMy43NjM2IDguOTIzNDkgMTIuNzY4OCA4Ljc5MDAxIDExLjU5OSA4Ljc5MDAxQzEwLjE4NDkgOC43OTAwMSA5LjAxMzI4IDguOTg5MzMgOC43OTMyMSA5LjIzMTk0QzguNjk5NjIgOS4zMjA4IDguNjM2NDggOS40MzY5NiA4LjYxMjgzIDkuNTYzODRMOC41MjI2NCAxMC40MjUyTDguMDE0ODcgMTIuOTY0OUM3LjYxNzEzIDE1LjEyOTUgNy4xNTM1NSAxNy40Mjc2IDcuNDE4NzEgMTcuNTM3NkM5LjA0NDQ1IDE4LjA2MzcgMTAuNzU4IDE4LjI2MzkgMTIuNDYxMyAxOC4xMjY1QzE3LjQzMDggMTcuNzI3OSAyMS4yNTIyIDE0Ljc2ODcgMjAuOTg3IDExLjUyMVoiIGZpbGw9IiNmZmZmZmYiLz4KPC9zdmc+" alt="EcoleDirecte version" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white" alt="language"></img>
+</p>
 
-A modern, robust, and English-first TypeScript wrapper for the private EcoleDirecte API. Designed for Edge environments (Cloudflare Workers) with zero production dependencies.
-
-## Key Features
-
-- **English-First**: All API responses are transformed from franglais to clean, natural English camelCase.
-- **Zero-Dependency**: Only uses native `fetch` and Web APIs. No `axios`, no Node.js built-ins.
-- **Stateless Design**: Easily export and restore session state for serverless environments.
-- **Full 2FA Support**: Implements the complex "Flower" authentication flow, including QCM challenges.
-- **Smart Refresh**: Automatically handles token expiration using UUID and Access Token.
-- **Markdown Conversion**: Built-in parser for Homework and Messaging content.
-- **Automatic Data Transformation**: Flat structures, Base64 profile pictures, and normalized numbers.
-
-## Installation
-
+### Install with npm
 ```bash
-pnpm add evodirecte
+npm install evodirecte
 ```
 
-## Quick Start
-
-```typescript
-import { evoDirecte } from 'evodirecte';
-
-const client = new evoDirecte();
-
-// 1. Initial Login
-const loginResult = await client.login('username', 'password', 'optional-uuid');
-
-if (loginResult.requires2FA) {
-    // 2. Handle 2FA if needed
-    console.log('Question:', loginResult.qcm.question);
-    const answer = '...'; // Get from user
-    await client.validate2FA('username', 'password', answer);
-}
-
-// 3. Use modules
-const { grades } = await client.grades.getGrades();
-const timetable = await client.timetable.getTimetable('2023-09-01', '2023-09-08');
-
-// 4. Save session for later
-const session = client.getSessionData();
-// Store 'session' in your DB/Cookie...
-
-// 5. Restore session later
-const restoredClient = evoDirecte.fromSession(session);
+### Install with Bun
+```bash
+bun add evodirecte
 ```
 
-## Modules Covered
-
-- **Grades**: Full history, averages, and class statistics.
-- **Timetable**: Weekly schedule with teacher and room details.
-- **Homework**: List of tasks, detailed content (Markdown), and marking as done.
-- **Messaging**: List messages, read content, and send new ones.
-- **Documents**: Access to administrative and school documents.
-- **School Life**: Absences, delays, and sanctions.
+## Documentation
+See the [project wiki](https://github.com/softwarevo/evodirecte/wiki).
 
 ## License
+evoDirecte is licensed under the [EUPL 1.2](https://eupl.eu/)), allowing you to use, modify, and distribute it for both commercial and non-commercial purposes, provided that the license terms are respected. See the [LICENSE](/LICENSE) file for more details.
 
-MIT
+## Legal notice
+**YOU** are responsible for everything you made evoDirecte process. Don't use evoDirecte with accounts you don't have the permission to use.
