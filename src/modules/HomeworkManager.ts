@@ -1,10 +1,10 @@
 import { Fetcher } from "../utils/fetcher";
-import { evoDirecte } from "../core/evoDirecte";
+import { wrapDirecte } from "../core/wrapDirecte";
 import { HomeworkDay, HomeworkItem, HomeworkDetails } from "../types/homework";
 import { htmlToMarkdown } from "../utils/markdown";
 
 export class HomeworkManager {
-    constructor(private fetcher: Fetcher, private client: evoDirecte) {}
+    constructor(private fetcher: Fetcher, private client: wrapDirecte) {}
 
     async getHomeworkList(): Promise<HomeworkDay[]> {
         this.client.checkModule("CAHIER_DE_TEXTES");
