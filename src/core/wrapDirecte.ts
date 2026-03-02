@@ -10,7 +10,7 @@ import { DocumentsManager } from "../modules/DocumentsManager";
 import { SchoolLifeManager } from "../modules/SchoolLifeManager";
 import { imageUrlToBase64 } from "../utils/base64";
 
-export class evoDirecte {
+export class wrapDirecte {
     private fetcher: Fetcher;
     private auth: AuthManager;
     private sessionData: EDSessionData;
