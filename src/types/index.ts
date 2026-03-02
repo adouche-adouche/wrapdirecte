@@ -1,6 +1,6 @@
 export const BASE_URL = "https://api.ecoledirecte.com/v3";
 export const API_VERSION = "7.8.2";
-export const DEFAULT_USER_AGENT = `evoDirecte/1.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148  EDMOBILE v${API_VERSION}`;
+export const DEFAULT_USER_AGENT = `wrapDirecte/1.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148  EDMOBILE v${API_VERSION}`;
 
 export interface EDResponse<T> {
     code: number;
