@@ -1,9 +1,9 @@
 import { Fetcher } from "../utils/fetcher";
-import { evoDirecte } from "../core/evoDirecte";
+import { wrapDirecte } from "../core/wrapDirecte";
 import { SchoolLifeItem } from "../types/schoollife";
 
 export class SchoolLifeManager {
-    constructor(private fetcher: Fetcher, private client: evoDirecte) {}
+    constructor(private fetcher: Fetcher, private client: wrapDirecte) {}
 
     async getSchoolLife(): Promise<SchoolLifeItem[]> {
         this.client.checkModule("VIE_SCOLAIRE");
