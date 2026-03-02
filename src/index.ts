@@ -1,4 +1,4 @@
-export * from "./core/evoDirecte";
+export * from "./core/wrapDirecte";
 export * from "./types";
 export * from "./types/auth";
 export * from "./types/grades";
