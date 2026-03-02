@@ -1,11 +1,11 @@
 import { Fetcher } from "../utils/fetcher";
-import { evoDirecte } from "../core/evoDirecte";
+import { wrapDirecte } from "../core/wrapDirecte";
 import { MessageSummary, MessageDetails } from "../types/messaging";
 import { htmlToMarkdown, markdownToHtml } from "../utils/markdown";
 import { decodeBase64, encodeBase64 } from "../utils/base64";
 
 export class MessagingManager {
-    constructor(private fetcher: Fetcher, private client: evoDirecte) {}
+    constructor(private fetcher: Fetcher, private client: wrapDirecte) {}
 
     async getMessages(folder: string = "received"): Promise<MessageSummary[]> {
         this.client.checkModule("MESSAGERIE");
